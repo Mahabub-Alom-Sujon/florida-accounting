@@ -1,4 +1,173 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PropertiesComponent">{}</component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c543d64f-1c8c-45ec-bb57-03c4d87a2f80" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/(otherPage)/[urlName]/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/about/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/api/blog_post/route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/api/blog_single/route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/api/blog_slider/route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/api/category/route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/api/home_page/blog_post/route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/api/home_page/home_slider/route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/api/home_page/service/route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/api/home_page/team/route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/api/home_page/testimonial/route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/api/home_page/typewriter/route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/api/service/route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/api/setting/menu/route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/api/setting/submenu/route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/blog-details/[url_title]/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/blog/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/contact-us/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/css/globals.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AboutPage/About.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/BlogPage/BlogList.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/BlogPage/BlogSlider.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ContactUsPage/Contact-Us.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/HomePage/AboutSection.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/HomePage/BlogSection.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/HomePage/ChoseUsSection.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/HomePage/FuturesSection.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/HomePage/HeroSection.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/HomePage/OurTeamSection.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/HomePage/PartnerSection.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/HomePage/ServiceSection.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/HomePage/TestimonialSection.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MasterLayout/AppNavBar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MasterLayout/Footer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MasterLayout/MasterLayout.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ServicePage/ServicePage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vercel.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/file.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/globe.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/next.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vercel.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/window.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.module.css" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="34S530bFnxHmPjo7v2xEljXwRzr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.2.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Next.js-Project\florida-accounting\src\app\blog-details\[url_title]" />
+      <recent name="E:\Next.js-Project\florida-accounting\src\app\(blog-details)" />
+      <recent name="E:\Next.js-Project\florida-accounting\public" />
+      <recent name="E:\Next.js-Project\florida-accounting\src\assets" />
+      <recent name="E:\Next.js-Project\florida-accounting\src\assets\css" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.23726.96" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c543d64f-1c8c-45ec-bb57-03c4d87a2f80" name="Changes" comment="" />
+      <created>1761193931338</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761193931338</updated>
+      <workItem from="1761193932026" duration="3555000" />
+      <workItem from="1761199691633" duration="1486000" />
+      <workItem from="1761228368350" duration="2922000" />
+      <workItem from="1761233033744" duration="8219000" />
+      <workItem from="1761278401619" duration="5758000" />
+      <workItem from="1761394648900" duration="551000" />
+      <workItem from="1761402377534" duration="4525000" />
+      <workItem from="1761407826780" duration="10252000" />
+      <workItem from="1761456749912" duration="2208000" />
+      <workItem from="1761488036856" duration="7840000" />
+      <workItem from="1761647390028" duration="1753000" />
+      <workItem from="1761662019319" duration="4444000" />
+      <workItem from="1761670307893" duration="3729000" />
+      <workItem from="1761738553186" duration="1193000" />
+      <workItem from="1761748796678" duration="7344000" />
+      <workItem from="1761912735646" duration="679000" />
+      <workItem from="1761976604497" duration="3198000" />
+      <workItem from="1761985725813" duration="1108000" />
+      <workItem from="1761987676029" duration="927000" />
+      <workItem from="1762001180115" duration="407000" />
+      <workItem from="1762004006298" duration="12762000" />
+      <workItem from="1762055367205" duration="3922000" />
+      <workItem from="1762060816493" duration="1250000" />
+      <workItem from="1762109240208" duration="951000" />
+      <workItem from="1762178891160" duration="8565000" />
+      <workItem from="1762244696321" duration="3152000" />
+      <workItem from="1762266385876" duration="696000" />
+      <workItem from="1762269615593" duration="4739000" />
+      <workItem from="1762343948242" duration="299000" />
+      <workItem from="1762352410781" duration="959000" />
+      <workItem from="1762402421180" duration="5657000" />
+      <workItem from="1762438216730" duration="3136000" />
+      <workItem from="1762505210546" duration="1285000" />
+      <workItem from="1762524755045" duration="1173000" />
+      <workItem from="1762572167113" duration="5689000" />
+      <workItem from="1762604427155" duration="2013000" />
+      <workItem from="1762611653914" duration="12337000" />
+      <workItem from="1762677737407" duration="1688000" />
+      <workItem from="1762869050885" duration="627000" />
+      <workItem from="1762920442486" duration="4485000" />
+      <workItem from="1762938899159" duration="2877000" />
+      <workItem from="1762942606878" duration="2761000" />
+      <workItem from="1762947614626" duration="3295000" />
+      <workItem from="1762955507167" duration="16948000" />
+      <workItem from="1763010187093" duration="2841000" />
+      <workItem from="1763024591413" duration="3244000" />
+      <workItem from="1763049736058" duration="1021000" />
+      <workItem from="1763051165697" duration="2564000" />
+      <workItem from="1763106555133" duration="2486000" />
+      <workItem from="1763113837787" duration="588000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
 </project>

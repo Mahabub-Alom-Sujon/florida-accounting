@@ -1,95 +1,59 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-
-export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+import React from 'react';
+import { Suspense } from 'react'
+import MasterLayout from "@/components/MasterLayout/MasterLayout";
+import HeroSection from "@/components/HomePage/HeroSection";
+import AboutSection from "@/components/HomePage/AboutSection";
+import OurTeamSection from "@/components/HomePage/OurTeamSection";
+import TestimonialSection from "@/components/HomePage/TestimonialSection";
+import BlogSection from "@/components/HomePage/BlogSection";
+import ChoseUsSection from "@/components/HomePage/ChoseUsSection";
+import ServiceSection from "@/components/HomePage/ServiceSection";
+import FuturesSection from "@/components/HomePage/FuturesSection";
+import PartnerSection from "@/components/HomePage/PartnerSection";
+async function getData(){
+    let option={method:"GET",cache:"no-store"}
+    let HomeSlider = (await (await fetch(`${process.env.HOST}/api/home_page/home_slider`,option)).json())["data"]
+    let Blog_Post = (await (await fetch(`${process.env.HOST}/api/home_page/blog_post`,option)).json())["data"]
+    let Testimonial= (await (await fetch(`${process.env.HOST}/api/home_page/testimonial`,option)).json())["data"]
+    let HomeService = (await (await fetch(`${process.env.HOST}/api/home_page/service`,option)).json())["data"]
+    let Team=(await (await fetch(`${process.env.HOST}/api/home_page/team`,option)).json())["data"]
+    return {Blog_Post,Testimonial,HomeSlider,HomeService,Team};
 }
+const Page =async () => {
+    const data = await getData();
+    return (
+        <>
+           <MasterLayout>
+               <Suspense fallback={<div>Loading...</div>}>
+                    <HeroSection data={data['HomeSlider']}/>
+               </Suspense>
+               <Suspense fallback={<div>Loading...</div>}>
+                   <FuturesSection/>
+               </Suspense>
+               <Suspense fallback={<div>Loading...</div>}>
+                   <PartnerSection/>
+               </Suspense>
+               <Suspense fallback={<div>Loading...</div>}>
+                   <AboutSection/>
+               </Suspense>
+               <Suspense fallback={<div>Loading...</div>}>
+                   <ServiceSection data={data['HomeService']}/>
+               </Suspense>
+               <Suspense fallback={<div>Loading...</div>}>
+                   <ChoseUsSection/>
+               </Suspense>
+               <Suspense fallback={<div>Loading...</div>}>
+                   <TestimonialSection data={data['Testimonial']}/>
+               </Suspense>
+               <Suspense fallback={<div>Loading...</div>}>
+                   <OurTeamSection data={data['Team']} />
+               </Suspense>
+               <Suspense fallback={<div>Loading...</div>}>
+                   <BlogSection data={data['Blog_Post']}/>
+               </Suspense>
+           </MasterLayout>
+        </>
+    );
+};
+
+export default Page;

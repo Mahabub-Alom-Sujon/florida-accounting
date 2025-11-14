@@ -1,0 +1,173 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  // output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model users {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  firstName String?
+  lastName  String?
+  email     String?  @unique
+  photo     String?
+  password  String?
+  otp       String   @default("0")
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+}
+
+model menu {
+  id        String     @id @default(auto()) @map("_id") @db.ObjectId
+  name      String     @unique
+  urlName   String     @unique
+  submenus  submenus[]
+  isActive  Boolean    @default(true)
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @default(now()) @updatedAt
+}
+
+model submenus {
+  id        String     @id @default(auto()) @map("_id") @db.ObjectId
+  name      String     @unique
+  urlName   String     @unique
+  isActive  Boolean    @default(true)
+  services  services[]
+  menuId    String     @db.ObjectId
+  menu      menu       @relation(fields: [menuId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @default(now()) @updatedAt
+}
+
+model hero_silde {
+  id               String       @id @default(auto()) @map("_id") @db.ObjectId
+  background_url   String?
+  background_color String?      @default("#FFFF")
+  subTitle         String?
+  heading_title    String?
+  typewriter       typewriter[]
+  description      String?
+  button_text      String?
+  button_link      String?
+  img_url_1        String?
+  alt_text_1       String?
+  isActive         Boolean      @default(true)
+  createdAt        DateTime     @default(now())
+  updatedAt        DateTime     @default(now()) @updatedAt
+}
+
+model typewriter {
+  id          String     @id @default(auto()) @map("_id") @db.ObjectId
+  text        String?
+  heroSlideId String     @db.ObjectId
+  hero_silde  hero_silde @relation(fields: [heroSlideId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  isActive    Boolean    @default(true)
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @default(now()) @updatedAt
+}
+
+model testimonials {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String?
+  img_url   String?
+  alt_text  String?
+  rating    String?
+  feedback  String?
+  position  String?
+  isActive  Boolean  @default(true) // Adding isActive field
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+}
+
+model category {
+  id        String      @id @default(auto()) @map("_id") @db.ObjectId
+  name      String      @unique
+  isActive  Boolean     @default(true)
+  blog_post blog_post[]
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @default(now()) @updatedAt
+}
+
+model blog_post {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  url_title     String?  @unique
+  heading_title String?  @unique
+  short_des     String?
+  img_url       String?
+  alt_text      String?
+  long_des      String?
+  slug          String[] @default(["Blog"])
+  button_text   String?
+  button_link   String?
+  author        String?
+  meta_title    String?
+  meta_des      String?
+  meta_keywords String?
+  catID         String   @db.ObjectId
+  isActive      Boolean  @default(true)
+  category      category @relation(fields: [catID], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @default(now()) @updatedAt
+}
+
+model services {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  heading_title String?
+  short_des     String?
+  icon_url      String?
+  icon_alt_text String?
+  img_url       String?
+  alt_text      String?
+  long_des      String?
+  button_text   String?
+  button_link   String?
+  isActive      Boolean  @default(true)
+  submenusId    String   @db.ObjectId
+  submenus      submenus @relation(fields: [submenusId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @default(now()) @updatedAt
+}
+
+model teams {
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId
+  img_url         String?
+  alt_text        String?
+  name            String?
+  position        String?
+  facebook_link   String?
+  twitter_link    String?
+  linkdin_link    String?
+  pinterest_link  String?
+  instergram_link String?
+  isActive        Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @default(now()) @updatedAt
+}
+
+model about {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+}
+
+model contact {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  firstName String?
+  lastName  String?
+  email     String?
+  phone     String?
+  subject   String?
+  message   String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+}
