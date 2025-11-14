@@ -200,18 +200,21 @@ export default function Footer() {
                     transition={{duration: 0.8}}
                 >
                     <div className="logo-prient">
-                        <div className="logo-premium">
-                            <span className="logo-glow">F</span>
-                            <span className="logo-accent">A</span>
-                            <span className="logo-accent">A</span>
-                        </div>
-                        <div>
-                            <p className="logo-text">Florida Accounting & Advisers</p>
-                        </div>
+                        <Link href="https://fl-accounting.com">
+                            <div className="logo-premium">
+                                <span className="logo-glow">F</span>
+                                <span className="logo-accent">A</span>
+                                <span className="logo-accent">A</span>
+                            </div>
+                            <div>
+                                <p className="logo-text">Florida Accounting & Advisers</p>
+                            </div>
+                        </Link>
                     </div>
 
                     <p className="tagline-premium">
-                        Certified Amazon SPN Partner – Global Scaling Experts
+                        Our Company Provides A Full Range Of Accounting Services, From Tax Preparation To Payroll To
+                        Consulting And Everything In Between.
                     </p>
 
                     <div className="stats-grid">
@@ -319,7 +322,7 @@ export default function Footer() {
                         {[FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram].map((Icon, i) => (
                             <motion.a
                                 key={i}
-                                href="#"
+                                href="/"
                                 target="_blank"
                                 rel="noopener noreferrer nofollow"
                                 whileHover={{scale: 1.2, rotate: 360}}
@@ -367,7 +370,9 @@ export default function Footer() {
             <div className="footer-bottom-premium">
                 <div className="container bottom-flex-premium">
                     <p className="mb-0">
-                        © {new Date().getFullYear()} <strong>fl-accounting.com</strong> — Florida Accounting & Advisers
+                        © {new Date().getFullYear()}
+                        <Link className="text-white" href="https://fl-accounting.com"><strong>fl-accounting.com</strong></Link>
+                        — Florida Accounting & Advisers
                     </p>
                     <p className="design-credit mb-0">
                         Design & Development by
