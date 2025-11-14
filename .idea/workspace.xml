@@ -5,57 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c543d64f-1c8c-45ec-bb57-03c4d87a2f80" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/(otherPage)/[urlName]/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/about/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/api/blog_post/route.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/api/blog_single/route.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/api/blog_slider/route.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/api/category/route.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/api/home_page/blog_post/route.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/api/home_page/home_slider/route.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/api/home_page/service/route.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/api/home_page/team/route.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/api/home_page/testimonial/route.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/api/home_page/typewriter/route.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/api/service/route.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/api/setting/menu/route.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/api/setting/submenu/route.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/blog-details/[url_title]/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/blog/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/contact-us/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/css/globals.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AboutPage/About.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/BlogPage/BlogList.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/BlogPage/BlogSlider.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ContactUsPage/Contact-Us.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/HomePage/AboutSection.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/HomePage/BlogSection.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/HomePage/ChoseUsSection.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/HomePage/FuturesSection.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/HomePage/HeroSection.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/HomePage/OurTeamSection.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/HomePage/PartnerSection.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/HomePage/ServiceSection.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/HomePage/TestimonialSection.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MasterLayout/AppNavBar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MasterLayout/Footer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MasterLayout/MasterLayout.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ServicePage/ServicePage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vercel.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/file.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/globe.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/next.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vercel.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/window.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.module.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +113,7 @@
       <workItem from="1763049736058" duration="1021000" />
       <workItem from="1763051165697" duration="2564000" />
       <workItem from="1763106555133" duration="2486000" />
-      <workItem from="1763113837787" duration="588000" />
+      <workItem from="1763113837787" duration="1328000" />
     </task>
     <servers />
   </component>
