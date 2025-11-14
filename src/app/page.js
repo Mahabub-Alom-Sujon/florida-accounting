@@ -17,7 +17,8 @@ async function getData(){
     let Testimonial= (await (await fetch(`${process.env.HOST}/api/home_page/testimonial`,option)).json())["data"]
     let HomeService = (await (await fetch(`${process.env.HOST}/api/home_page/service`,option)).json())["data"]
     let Team=(await (await fetch(`${process.env.HOST}/api/home_page/team`,option)).json())["data"]
-    return {Blog_Post,Testimonial,HomeSlider,HomeService,Team};
+    let HomeAbout=(await (await fetch(`${process.env.HOST}/api/home_page/home_about`,option)).json())["data"]
+    return {Blog_Post,Testimonial,HomeSlider,HomeService,Team,HomeAbout};
 }
 const Page =async () => {
     const data = await getData();
@@ -34,7 +35,7 @@ const Page =async () => {
                    <PartnerSection/>
                </Suspense>
                <Suspense fallback={<div>Loading...</div>}>
-                   <AboutSection/>
+                   <AboutSection data={data['HomeAbout']['0']}/>
                </Suspense>
                <Suspense fallback={<div>Loading...</div>}>
                    <ServiceSection data={data['HomeService']}/>

@@ -138,6 +138,20 @@ model services {
   updatedAt     DateTime @default(now()) @updatedAt
 }
 
+model home_about {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  img_url       String?
+  alt_text      String?
+  heading_title String?
+  text          String?
+  list_item     Json?
+  button_text   String?
+  button_link   String?
+  isActive      Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @default(now()) @updatedAt
+}
+
 model teams {
   id              String   @id @default(auto()) @map("_id") @db.ObjectId
   img_url         String?

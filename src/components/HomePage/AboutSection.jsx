@@ -3,16 +3,17 @@ import Image from "next/image";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io"
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
-const AboutSection = () => {
+const AboutSection = (props) => {
     return (
         <>
             <div className="about-section">
+                {/*{JSON.stringify(props.data)}*/}
                 <div className="container container-xl container-xxl">
                     <div className="row">
                         <div className="col-xxl-6 col-xl-6 col-lg-6">
                             <div className="about-left">
                                 <div>
-                                    <img className="w-100" src="/images/about-image.png" alt="about" />
+                                    <img className="w-100" src={props?.data?.img_url} alt={props?.data?.alt_text}/>
                                     {/*<Image*/}
                                     {/*    src="/images/about-image.png"*/}
                                     {/*    alt="logo"*/}
@@ -39,13 +40,11 @@ const AboutSection = () => {
                                         <h5>Who We Are</h5>
                                     </div>
                                     <div className="title">
-                                        <h2>Your Trusted Business Advisers in Florida.</h2>
+                                        <h2>{props?.data?.heading_title}</h2>
                                     </div>
                                 </div>
                                 <div className="content-text">
-                                    <p>Florida Accounting & Advisers brings accounting & bookkeeping services in Florida
-                                        directly into your home or business enabling you to more actively participate in
-                                        your financial management.</p>
+                                    <p>{props?.data?.text}</p>
                                 </div>
                                 <div className="about-list">
                                     <ul>
@@ -73,7 +72,7 @@ const AboutSection = () => {
                                 </div>
                                 <div className="about-btn">
                                     <button>
-                                        <Link href="/">Learn more <span><FaArrowRight/></span></Link>
+                                        <Link href="/about">{props?.data?.button_text} <span><FaArrowRight/></span></Link>
                                     </button>
                                 </div>
                             </div>
