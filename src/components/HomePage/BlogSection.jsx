@@ -24,7 +24,7 @@ const BlogSection = (props) => {
                     <div className="row mt-5">
                         {
                             props.data.map((item, index) => (
-                                <div className="col-xxl-4 col-xl-4 col-lg-4" key={index}>
+                                <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12" key={index}>
                                     <div className="blog-single-post">
                                         <div className="blog-post-thumb">
                                             <img src={item['img_url']} alt={item['alt_text']}/>

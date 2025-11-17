@@ -16,7 +16,7 @@ const BlogSlider = (props) => {
                     <div className="row">
                         <div className="col-xxl-12 col-xl-12 col-lg-12">
                             <Carousel activeIndex={index} onSelect={handleSelect} controls={true}>
-                                {props?.['data'] && props?.['data'].map((item) => (
+                                {props?.['slider'] && props?.['slider'].map((item) => (
                                     <Carousel.Item key={item.id}>
                                         <Link href={`/blog/${item?.["url_title"]}`}>
                                             <div style={{ width: "100%", height: "450px", position: "relative" }}>

@@ -1,132 +1,3 @@
-// import React from 'react';
-// import { FaFacebookF } from "react-icons/fa6";
-// import { MdPhoneInTalk } from "react-icons/md";
-// import {FaLinkedinIn, FaTwitter } from "react-icons/fa";
-// import { FaArrowRightLong } from "react-icons/fa6";
-// import {AiOutlineInstagram, AiOutlineMail} from "react-icons/ai";
-// import Link from "next/link";
-// import Image from "next/image";
-// import {IoLocationOutline} from "react-icons/io5";
-// const Footer = () => {
-//     const currentYear = new Date().getFullYear();
-//     return (
-//         <>
-//             <div className="footer">
-//                 <div className="container container-xl container-xxl">
-//                     <div className="row">
-//                         <div className="col-xxl-3 col-xl-3 col-lg-3">
-//                             <div className="single-widget">
-//                                 <div className="footer-img">
-//                                     <Image
-//                                         src="/images/FAA.png"
-//                                         alt="logo"
-//                                         width={150}
-//                                         height={70}
-//                                         sizes="100vw"
-//                                         //priority
-//                                     />
-//                                 </div>
-//                                 <div className="content-text">
-//                                     <p>Our Company Provides A Full Range Of Accounting Services, From Tax Preparation To
-//                                         Payroll To Consulting And Everything In Between.</p>
-//                                 </div>
-//                                 <div className="social-media">
-//                                     <ul>
-//                                         <li>
-//                                             <Link href="https://www.facebook.com/Floridaaccounting" target="_blank"><FaFacebookF/></Link>
-//                                         </li>
-//                                         <li>
-//                                             <Link href="https://www.linkedin.com/in/roxanascaffidi" target="_blank"><FaLinkedinIn/></Link>
-//                                         </li>
-//                                         <li>
-//                                             <Link href="https://www.instagram.com/floridaaccounting" target="_blank"><AiOutlineInstagram/></Link>
-//                                         </li>
-//                                         <li>
-//                                             <Link href="https://x.com/fl_accounting" target="_blank"><FaTwitter/></Link>
-//                                         </li>
-//                                     </ul>
-//                                 </div>
-//                             </div>
-//                         </div>
-//                         <div className="col-xxl-3 col-xl-3 col-lg-3">
-//                             <div className="single-widget">
-//                                 <h4>Quick Menu</h4>
-//                                 <ul>
-//                                     <li>
-//                                         <Link href="/"><span><FaArrowRightLong /></span> Client Portal</Link>
-//                                     </li>
-//                                     <li>
-//                                         <Link href="/"><span><FaArrowRightLong/></span> Tax Tips</Link>
-//                                     </li>
-//                                     <li>
-//                                         <Link href="/"><span><FaArrowRightLong /></span> Specials</Link>
-//                                     </li>
-//                                     <li>
-//                                         <Link href="/"> <span><FaArrowRightLong /></span> Client Resources</Link>
-//                                     </li>
-//                                 </ul>
-//                             </div>
-//                         </div>
-//                         <div className="col-xxl-3 col-xl-3 col-lg-3">
-//                             <div className="single-widget">
-//                                 <h4>Our Services</h4>
-//                                 <ul>
-//                                     <li>
-//                                         <Link href="/"><span><FaArrowRightLong /></span> Accounting & Bookkeeping</Link>
-//                                     </li>
-//                                     <li>
-//                                         <Link href="/"><span><FaArrowRightLong /></span> Payroll Services</Link>
-//                                     </li>
-//                                     <li>
-//                                         <Link href="/"><span><FaArrowRightLong /></span> Tax Preparation &
-//                                             Planning</Link>
-//                                     </li>
-//                                     <li>
-//                                         <Link href="/"><span><FaArrowRightLong /></span> New Business Formation</Link>
-//                                     </li>
-//                                     <li>
-//                                         <Link href="/"> <span><FaArrowRightLong/></span> Strategic Business Planning</Link>
-//                                     </li>
-//                                 </ul>
-//                             </div>
-//                         </div>
-//                         <div className="col-xxl-3 col-xl-3 col-lg-3">
-//                             <div className="single-widget">
-//                                 <h4>Contact Us</h4>
-//                                 <ul>
-//                                     <li>
-//                                         <span><MdPhoneInTalk/></span>
-//                                         <p>+1 (772) 282-0922</p>
-//                                     </li>
-//                                     <li>
-//                                         <span><MdPhoneInTalk/></span>
-//                                         <p>+1 (561) 939-2553</p>
-//                                     </li>
-//                                     <li>
-//                                         <span><AiOutlineMail/></span>
-//                                         <Link href="mailto:roxana@fl-accounting.com"> roxana@fl-accounting.com</Link>
-//                                     </li>
-//                                 </ul>
-//                             </div>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </div>
-//             <div className="footer-bottom">
-//             <div className="container container-xl container-xxl">
-//                     <div className="row">
-//                         <div className="col-xxl-12 col-xl-12 col-lg-12">
-//                             <p>Copyright &copy; {currentYear} Florida Accounting & Advisers </p>
-//                             <p className="design-credit">Design & Development by <Link href="" target="_blank">Your Name</Link></p>
-//                         </div>
-//                     </div>
-//             </div>
-//             </div>
-//         </>
-//     );
-// };
-//
-// export default Footer;
 
 'use client';
 import React, { useState, useEffect } from "react";
@@ -139,7 +10,7 @@ import CountUp from 'react-countup';
 import { motion } from 'framer-motion';
 import Link from "next/link";
 
-export default function Footer() {
+export default function Footer(props) {
     const [email, setEmail] = useState("");
     const [status, setStatus] = useState("idle");
     const [darkMode, setDarkMode] = useState(false);
@@ -183,7 +54,7 @@ export default function Footer() {
 
     return (
         <footer className={`footer premium-footer ${darkMode ? 'dark' : ''}`}>
-
+            {/*{JSON.stringify(props?.data?.[0]?.submenus)}*/}
             {/* Waves */}
             <div className="wave-container">
                 <div className="wave wave1"></div>
@@ -245,41 +116,50 @@ export default function Footer() {
                 >
                     <h3>Navigation</h3>
                     <ul className="link-list">
-                        {["Home", "Services", "Blog", "Contact"].map((item) => (
-                            <motion.li
-                                key={item}
-                                whileHover={{ x: 5, color: "#ff9900" }}
-                                transition={{ type: "spring", stiffness: 400 }}
-                            >
-                                <a href={`${item.toLowerCase()}`}>{item}</a>
-                            </motion.li>
-                        ))}
+                        <motion.li
+                            whileHover={{x: 5, color: "#ff9900"}}
+                            transition={{type: "spring", stiffness: 400}}
+                        >
+                            <Link href="/">Home</Link>
+                        </motion.li>
+                        <motion.li
+                            whileHover={{x: 5, color: "#ff9900"}}
+                            transition={{type: "spring", stiffness: 400}}
+                        >
+                            <Link href="/about">About</Link>
+                        </motion.li>
+                        <motion.li
+                            whileHover={{x: 5, color: "#ff9900"}}
+                            transition={{type: "spring", stiffness: 400}}
+                        >
+                            <Link href="https://app.taxdome.com/login">Client Portal</Link>
+                        </motion.li>
+                        <motion.li
+                            whileHover={{x: 5, color: "#ff9900"}}
+                            transition={{type: "spring", stiffness: 400}}
+                        >
+                            <Link href="/contact">Contact</Link>
+                        </motion.li>
                     </ul>
                 </motion.div>
 
                 {/* Services */}
                 <motion.div
                     className="footer-col"
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
+                    initial={{opacity: 0, y: 40}}
+                    whileInView={{opacity: 1, y: 0}}
+                    transition={{duration: 0.6, delay: 0.4 }}
                 >
                     <h3>Our Services</h3>
                     <ul className="link-list">
-                        {[
-                            "Accounting & Bookkeeping",
-                            "Payroll Services",
-                            "Tax Preparation & Planning",
-                            "New Business Formation"
-                        ].map((item) => (
-                            <motion.li
-                                key={item}
-                                // whileHover={{ x: 5, color: "#ff9900" }}
-                                transition={{ type: "spring", stiffness: 400 }}
-                            >
-                                <Link href={`${item.toLowerCase().replace(/ /g, "-")}`}>{item}</Link>
-                            </motion.li>
-                        ))}
+                        {
+                            props?.data?.[0]?.submenus.map((item, index) => (
+                                <motion.li key={index} transition={{ type: "spring", stiffness: 400 }}>
+                                    <Link href={`/${item.urlName}`}>{item['name']}</Link>
+                                </motion.li>
+
+                            ))
+                        }
                     </ul>
                 </motion.div>
 
@@ -301,15 +181,23 @@ export default function Footer() {
                             <p>+1 (561) 939-2553</p>
                         </div>
                         <div>
+                            <span><FaPhone className="cicon"/></span>
+                            <p>+1 (772) 282-0922</p>
+                        </div>
+                        <div>
                             <span><FaMapMarkerAlt className="map-pin"/></span>
                             <p className="address-premium">980 N Federal Hwy. Suite 110, Boca Raton, FL 33432</p>
+                        </div>
+                        <div>
+                            <span><FaMapMarkerAlt className="map-pin"/></span>
+                            <p className="address-premium">789 SW Federal Hwy Suite 201, Stuart, FL 34994</p>
                         </div>
 
                     </div>
                     <motion.div
                         className="map-pin-animation"
                         animate={{y: [0, -10, 0]}}
-                        transition={{ repeat: Number.POSITIVE_INFINITY, duration: 2 }}
+                        transition={{repeat: Number.POSITIVE_INFINITY, duration: 2}}
                     >
                         <FaMapMarkerAlt className="floating-pin" />
                     </motion.div>
@@ -319,17 +207,22 @@ export default function Footer() {
             <div className="footer-bar">
                 <div className="container bar-content">
                     <div className="social-premium">
-                        {[FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram].map((Icon, i) => (
+                        {[
+                            {Icon: FaFacebookF, url: "https://www.facebook.com/Floridaaccounting"},
+                            {Icon: FaTwitter, url: "https://x.com/fl_accounting"},
+                            {Icon: FaLinkedinIn, url: "https://www.linkedin.com/in/roxanascaffidi"},
+                            {Icon: FaInstagram, url: "https://www.instagram.com/floridaaccounting"},
+                        ].map(({Icon, url}, i) => (
                             <motion.a
                                 key={i}
-                                href="/"
+                                href={url}
                                 target="_blank"
                                 rel="noopener noreferrer nofollow"
                                 whileHover={{scale: 1.2, rotate: 360}}
-                                whileTap={{scale: 0.9 }}
+                                whileTap={{scale: 0.9}}
                                 className="social-ball"
                             >
-                                <Icon />
+                                <Icon/>
                             </motion.a>
                         ))}
                     </div>
@@ -359,9 +252,9 @@ export default function Footer() {
                                     strokeDashoffset: 176 - (176 * scrollProgress) / 100
                                 }}
                             />
-                            <circle className="ring-bg" cx="30" cy="30" r="28" />
+                            <circle className="ring-bg" cx="30" cy="30" r="28"/>
                         </svg>
-                        <FaArrowUp className="arrow-up" />
+                        <FaArrowUp className="arrow-up"/>
                     </button>
                 </div>
             </div>
@@ -369,15 +262,18 @@ export default function Footer() {
             {/* Footer Bottom */}
             <div className="footer-bottom-premium">
                 <div className="container bottom-flex-premium">
-                    <p className="mb-0">
-                        © {new Date().getFullYear()}
-                        <Link className="text-white" href="https://fl-accounting.com"><strong>fl-accounting.com</strong></Link>
-                        — Florida Accounting & Advisers
-                    </p>
-                    <p className="design-credit mb-0">
-                        Design & Development by
-                        <Link href="https://deedbangladesh.com" target="_blank">Deed Bangladesh IT Limited</Link>
-                    </p>
+                    <div>
+                        <p className="mb-0">
+                            © {new Date().getFullYear()}
+                            <Link className="text-white"
+                                  href="https://fl-accounting.com"><strong>fl-accounting.com</strong></Link>
+                            — Florida Accounting & Advisers
+                        </p>
+                        <p className="design-credit mb-0">
+                            Design & Development by
+                            <Link href="https://deedbangladesh.com" target="_blank">Deed Bangladesh IT Limited</Link>
+                        </p>
+                    </div>
                     <div className="legal-premium">
                         <Link href="/privacy">Privacy</Link>
                         <Link href="/terms">Terms</Link>

@@ -76,6 +76,27 @@ model typewriter {
   updatedAt   DateTime   @default(now()) @updatedAt
 }
 
+model brands {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  logo_url   String?
+  logo_link  String?
+  alt_text_1 String?
+  isActive   Boolean  @default(true)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @default(now()) @updatedAt
+}
+
+model futures {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  icon_url      String?
+  icon_alt_text String?
+  heading_title String?
+  text          String?
+  isActive      Boolean  @default(true) // Adding isActive field
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @default(now()) @updatedAt
+}
+
 model testimonials {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   name      String?

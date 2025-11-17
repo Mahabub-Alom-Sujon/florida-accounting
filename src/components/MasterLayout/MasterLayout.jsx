@@ -15,7 +15,7 @@ const MasterLayout =async (props) => {
             <Suspense fallback={<div>Loading...</div>}>
                 <AppNavBar data={data['Menu']}/>
                 {props.children}
-                <Footer/>
+                <Footer data={data['Menu']} />
             </Suspense>
         </>
     );

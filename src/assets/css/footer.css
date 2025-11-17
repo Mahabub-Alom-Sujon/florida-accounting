@@ -442,7 +442,7 @@ p.logo-text{
   .stats-grid { grid-template-columns: 1fr; }
   .premium-input-wrapper { flex-direction: column; }
   .premium-btn { border-radius: 12px; }
-  .bar-content { flex-direction: column; gap: 1.5rem; }
+  /*.bar-content { flex-direction: column; gap: 1.5rem; }*/
 }
 
 

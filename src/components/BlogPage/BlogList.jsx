@@ -13,7 +13,7 @@ const BlogList = () => {
     const router = useRouter();
     const [searchKey, setSearchKey] = useState("");
     const [searchInput, setSearchInput] = useState("");
-    const [perPage, setPerPage] = useState(8);
+    const [perPage, setPerPage] = useState(4);
     const [pageNo, setPageNo] = useState(1);
     const [catID, setCatID] = useState([]);
     const [data, setData] = useState(null);

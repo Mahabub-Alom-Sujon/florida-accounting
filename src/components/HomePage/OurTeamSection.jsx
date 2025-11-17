@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from "next/image";
 
 const OurTeamSection = (props) => {
     return (
@@ -7,7 +6,7 @@ const OurTeamSection = (props) => {
             <div className="team-section">
                 <div className="container container-xl container-xxl">
                     <div className="row d-flex justify-content-center">
-                        <div className="col-xxl-8 col-xl-8 col-lg-8">
+                        <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-12">
                             <div className="divider">
                                 <div className="sub-title-divider d-flex justify-content-center position-relative">
                                     <h5>Our Expertise</h5>
@@ -21,7 +20,7 @@ const OurTeamSection = (props) => {
                     <div className="row mt-5">
                         {
                             props.data.map((item, index) => (
-                                <div className="col-xxl-3 col-xl-3 col-lg-3" key={index}>
+                                <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6" key={index}>
                                     <div className="single-team">
                                         <div className="team-img">
                                             <img src={item['img_url']} alt={item['alt_text']}/>

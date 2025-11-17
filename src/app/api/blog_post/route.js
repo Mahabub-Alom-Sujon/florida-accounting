@@ -152,4 +152,39 @@ export async function GET(req,res) {
         return  NextResponse.json({status:"fail",data:e.toString()})
     }
 }
+export async function PUT(req, res) {
+    try{
+        let { searchParams } = new URL(req.url);
+        let id =searchParams.get('id');
+        const prisma=new PrismaClient();
+        const result=await prisma.blog_post.findUnique({
+            where:{id:id},
+            include:{
+                category:{select:{id:true,name:true}},
+            }
 
+        })
+
+        return  NextResponse.json({status:"success",data:result})
+    }
+    catch (e) {
+        return  NextResponse.json({status:"fail",data:e.toString()})
+    }
+}
+export async function PATCH(req, res) {
+    try{
+        let { searchParams } = new URL(req.url);
+        let id =searchParams.get('id');
+        let reqBody=await req.json();
+        const prisma=new PrismaClient();
+        const result=await prisma.blog_post.update({
+            where:{id:id},
+            data:reqBody
+        })
+
+        return  NextResponse.json({status:"success",data:result})
+    }
+    catch (e) {
+        return  NextResponse.json({status:"fail",data:e.toString()})
+    }
+}

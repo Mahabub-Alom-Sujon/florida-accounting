@@ -22,7 +22,7 @@ const TestimonialSection = (props) => {
         speed: 1000,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 3000,
         prevArrow: <PrevArrow />,
         nextArrow: <NextArrow />,
@@ -52,8 +52,8 @@ const TestimonialSection = (props) => {
         <>
             <div className="testimonials-section" style={{ backgroundImage: `url("/images/customer-bg.jpg")` }}>
                 <div className="container container-xl container-xxl">
-                    <div className="row d-flex align-items-center">
-                        <div className="col-xxl-6 col-xl-6 col-lg-6">
+                    <div className="row d-flex align-items-center justify-content-center">
+                        <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
                             <div className="testimonials-left">
                                 <div className="divider">
                                     <div className="sub-title-divider d-flex align-items-center position-relative">
@@ -97,7 +97,7 @@ const TestimonialSection = (props) => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-xxl-6 col-xl-6 col-lg-6">
+                        <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-10">
                             <div className="row g-0">
                                 <Slider {...settings}>
                                     {
@@ -108,10 +108,12 @@ const TestimonialSection = (props) => {
                                                         <div className="testimonials-img">
                                                             <img src={item['img_url']} alt={item['alt_text']}/>
                                                             <div>
-                                                            <h4>{item['name']}</h4>
+                                                                <h4>{item['name']}</h4>
                                                                 <span>{item['position']}</span>
                                                             </div>
-
+                                                            <div className="testi-quote">
+                                                                <img src="/images/quote.png" alt="Quote" />
+                                                            </div>
                                                         </div>
                                                         <div className="testimonials-text">
                                                             <p>{item['feedback']}</p>

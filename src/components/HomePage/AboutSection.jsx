@@ -9,8 +9,8 @@ const AboutSection = (props) => {
             <div className="about-section">
                 {/*{JSON.stringify(props.data)}*/}
                 <div className="container container-xl container-xxl">
-                    <div className="row">
-                        <div className="col-xxl-6 col-xl-6 col-lg-6">
+                    <div className="row d-flex justify-content-center">
+                        <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-10 ">
                             <div className="about-left">
                                 <div>
                                     <img className="w-100" src={props?.data?.img_url} alt={props?.data?.alt_text}/>
@@ -33,7 +33,7 @@ const AboutSection = (props) => {
 
                             </div>
                         </div>
-                        <div className="col-xxl-6 col-xl-6 col-lg-6">
+                        <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
                             <div className="about-right">
                                 <div className="divider">
                                     <div className="sub-title-divider d-flex align-items-center position-relative">

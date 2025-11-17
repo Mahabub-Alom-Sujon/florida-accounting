@@ -4,6 +4,8 @@ import "../assets/css/globals.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../assets/css/footer.css";
+import "../assets/css/responsive.css";
+import {Toaster} from "react-hot-toast";
 
 // Load fonts
 const montserrat = Montserrat({
@@ -28,7 +30,8 @@ export default function RootLayout({ children }) {
   return (
       <html lang="en">
       <body className={`${montserrat.variable} ${openSans.variable}`}>
-      {children}
+        {children}
+        <Toaster position="top-center"/>
       </body>
       </html>
   );

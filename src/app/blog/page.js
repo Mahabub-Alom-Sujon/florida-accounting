@@ -13,7 +13,7 @@ const Page =async () => {
         <>
             <MasterLayout>
                 <Suspense fallback={<div>Loading...</div>}>
-                    <BlogSlider data={data['BlogSlider']}/>
+                    <BlogSlider slider={data['BlogSlider']}/>
                     <BlogList/>
                 </Suspense>
             </MasterLayout>

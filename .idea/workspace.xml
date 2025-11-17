@@ -5,11 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c543d64f-1c8c-45ec-bb57-03c4d87a2f80" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/api/contact/route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/api/home_page/brand/route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/api/home_page/futures/route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/disclaimer/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/privacy/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/sitemap/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/terms/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/css/responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/BlogPage/BlogDetails.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ContactUsPage/GoogleMap.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MasterLayout/LoaderButton.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utility/FormHelper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(otherPage)/[urlName]/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(otherPage)/[urlName]/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/blog_post/route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/blog_post/route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/blog-details/[url_title]/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/blog-details/[url_title]/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/blog/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/blog/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/css/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/footer.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/css/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AboutPage/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutPage/About.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BlogPage/BlogList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BlogPage/BlogList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BlogPage/BlogSlider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BlogPage/BlogSlider.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContactUsPage/Contact-Us.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactUsPage/Contact-Us.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomePage/AboutSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomePage/AboutSection.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomePage/BlogSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomePage/BlogSection.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomePage/ChoseUsSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomePage/ChoseUsSection.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomePage/FuturesSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomePage/FuturesSection.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomePage/HeroSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomePage/HeroSection.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomePage/OurTeamSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomePage/OurTeamSection.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomePage/PartnerSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomePage/PartnerSection.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomePage/ServiceSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomePage/ServiceSection.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/HomePage/TestimonialSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomePage/TestimonialSection.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MasterLayout/AppNavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MasterLayout/AppNavBar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MasterLayout/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MasterLayout/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MasterLayout/MasterLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MasterLayout/MasterLayout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ServicePage/ServicePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ServicePage/ServicePage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +158,10 @@
       <workItem from="1763121488968" duration="1647000" />
       <workItem from="1763127160234" duration="15424000" />
       <workItem from="1763144276206" duration="4333000" />
+      <workItem from="1763213174374" duration="36501000" />
+      <workItem from="1763286049734" duration="6991000" />
+      <workItem from="1763313571468" duration="7297000" />
+      <workItem from="1763313590567" duration="837000" />
     </task>
     <servers />
   </component>
