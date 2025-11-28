@@ -15,7 +15,7 @@ const ServicePage = (props) => {
                         <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
                             <div className="services-details__sidebar">
                                 <div className="services-details__sidebar-services">
-                                    <div className="title-box">
+                                    <div className="title-box text-center">
                                         <h2>All Services</h2>
                                     </div>
                                     <ul className="services-details__sidebar-services-list">
@@ -26,7 +26,7 @@ const ServicePage = (props) => {
                                                     href={`/${item.urlName}`}
                                                 >
                                                     {item.name}
-                                                    <span><FaArrowRightLong /></span>
+                                                    <span><FaArrowRightLong/></span>
                                                 </Link>
                                             </li>
                                         ))}

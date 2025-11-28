@@ -1,23 +1,39 @@
 "use client"
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState,} from 'react';
 import Link from "next/link";
 import Image from "next/image";
 import {FaAngleDown, FaArrowRightLong, FaBars, FaBarsStaggered} from "react-icons/fa6";
 import Offcanvas from 'react-bootstrap/Offcanvas';
 const AppNavBar = (props) => {
+    const intervalRef = useRef(null);
     const [openDropdown, setOpenDropdown] = useState(null);
     const [show, setShow] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
+    const [showFirst, setShowFirst] = useState(true);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     useEffect(() => {
         const handleScroll = () => {
             setIsSticky(window.scrollY > 50); // Adjust the scroll trigger value as needed
         };
-
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+    useEffect(() => {
+        startInterval(); // start on load
+
+        return () => clearInterval(intervalRef.current);
+    }, []);
+
+    const startInterval = () => {
+        intervalRef.current = setInterval(() => {
+            setShowFirst(prev => !prev);
+        }, 300000); // 5 minutes
+    };
+
+    const stopInterval = () => {
+        clearInterval(intervalRef.current);
+    };
     return (
         <>
             <div className={`AppNavBar ${isSticky ? "sticky" : ""}`}>
@@ -64,32 +80,40 @@ const AppNavBar = (props) => {
                                 <li className="nav-item"><Link className="nav-link" href="/blog">Blog</Link></li>
                                 <li className="nav-item"><Link className="nav-link" href="/about">About</Link></li>
                                 <li className="nav-item"><Link className="nav-link" href="https://app.taxdome.com/login">Client Portal</Link></li>
-                                <li className="nav-item"><Link className="nav-link" href="/">Partnership</Link></li>
+                                <li className="nav-item"><Link className="nav-link" href="/partnership">Partnership</Link></li>
                                 <li className="nav-item"><Link className="nav-link" href="/contact-us">Contact Us</Link>
                                 </li>
                             </ul>
                         </div>
 
-                        {/* Phone (Desktop) */}
-                        <div className="col-lg-3 d-none d-lg-block">
-                            <div className="nav-right">
+                        {/* Right Side (Phone + Mobile Icon) */}
+                        <div className="col-6 col-lg-3 d-flex justify-content-end align-items-center">
+                            {/* Phone (Desktop Only) */}
+                            <div className="nav-right d-none d-lg-block">
                                 <div className="phone-item d-flex align-items-center">
                                     <div>
                                         <img src="/images/phone.png" alt="phone"/>
                                     </div>
-                                    <div className="phone-number ms-2">
-                                        <Link href="tel:+17722820922">
-                                            <span>+1 (772) 282-0922</span>
-                                        </Link>
+                                    <div
+                                        className="phone-number ms-2"
+                                        onMouseEnter={stopInterval}   // stop switching on hover
+                                        onMouseLeave={startInterval}   // resume switching on hover leave
+                                    >
+                                        {showFirst ? (
+                                            <Link href="tel:+15619392553">
+                                                <span>+1 (561) 939-2553</span>
+                                            </Link>
+                                        ) : (
+                                            <Link href="tel:+17723234397">
+                                                <span>+1 (772) 323-4397</span>
+                                            </Link>
+                                        )}
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        {/* Mobile Hamburger */}
-                        <div className="col-6 d-lg-none d-flex align-items-center justify-content-end">
-                            <button className="mobile-toggle" onClick={handleShow}>
-                                <FaBarsStaggered/>
+                            {/* Mobile Toggle */}
+                            <button className="mobile-toggle d-lg-none" onClick={handleShow}>
+                                <FaBarsStaggered size={22}/>
                             </button>
                         </div>
                     </div>

@@ -175,19 +175,19 @@ p.logo-text{
   transition: all 0.3s;
   position: relative;
 }
-/*.link-list a::before {*/
-/*  content: "→";*/
-/*  margin-right: 8px;*/
-/*  opacity: 0;*/
-/*  transition: all 0.3s;*/
-/*}*/
-/*.link-list a:hover {*/
-/*  color: var(--optional);*/
-/*}*/
-/*.link-list a:hover::before {*/
-/*  opacity: 1;*/
-/*  margin-right: 4px;*/
-/*}*/
+.link-list a::before {
+  content: "→";
+  /*margin-right: 8px;*/
+  opacity: 0;
+  transition: all 0.3s;
+}
+.link-list a:hover {
+  color: var(--optional);
+}
+.link-list a:hover::before {
+  opacity: 1;
+  margin-right: 4px;
+}
 
 /* Contact */
 .contact-card {

@@ -182,7 +182,7 @@ export default function Footer(props) {
                         </div>
                         <div>
                             <span><FaPhone className="cicon"/></span>
-                            <p>+1 (772) 282-0922</p>
+                            <p>+1 (772) 323-4397</p>
                         </div>
                         <div>
                             <span><FaMapMarkerAlt className="map-pin"/></span>
@@ -266,7 +266,7 @@ export default function Footer(props) {
                         <p className="mb-0">
                             © {new Date().getFullYear()}
                             <Link className="text-white"
-                                  href="https://fl-accounting.com"><strong>fl-accounting.com</strong></Link>
+                                  href="https://fl-accounting.com"> <strong>fl-accounting.com</strong></Link>
                             — Florida Accounting & Advisers
                         </p>
                         <p className="design-credit mb-0">

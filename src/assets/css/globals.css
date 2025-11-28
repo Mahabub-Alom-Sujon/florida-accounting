@@ -11,6 +11,9 @@
   box-sizing: border-box;
   text-decoration: none !important;
 }
+html {
+  scroll-behavior: smooth;
+}
 .body{
   font-size: 16px;
   font-family: 'Montserrat', sans-serif !important;
@@ -32,14 +35,15 @@ p{
   left: 0;
   right: 0;
   z-index: 1030;
+  width: 100%;
   background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(8px);
+  /*backdrop-filter: blur(8px);*/
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
-.AppNavBar.sticky + * {
-  margin-top: 80px;
-}
+/*.AppNavBar.sticky + * {*/
+/*  margin-top: 80px;*/
+/*}*/
 .AppNavBar{
   position: relative;
   background: #ffff;
@@ -47,6 +51,7 @@ p{
   z-index: 999;
   height: 70px;
   border-bottom:1px solid var(--optional) ;
+  transition: all 0.5s ease;
 }
 .AppNavBar:before{
   content: '';
@@ -131,6 +136,9 @@ p{
 .AppNavBar .nav-right > .phone-item .phone-number > a{
   margin-left: 10px;
 }
+.phone-number span {
+  transition: opacity 0.1s;
+}
 /*----Header End----*/
 /*----Hero-Section-Start---*/
 .hero-section{
@@ -205,12 +213,23 @@ p{
   z-index: 1;
 }
 .futures-section .single-futures{
+  position: relative;
   padding: 25px;
   background: #ffff;
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.12);
   border-radius: 5px;
   transition: 0.3s;
   cursor: pointer;
+}
+.futures-section .single-futures:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  height: 3px;
+  background: var(--optional);
+  left: 50%;
+  transform: translateX(-50%);
 }
 .futures-section .single-futures:hover{
   /*background: var(--optional);*/
@@ -270,7 +289,6 @@ p{
   position: relative;
   font-weight: 700;
   color: var(--optional);
-  /*margin-left: 70px;*/
   margin-bottom: 0 !important;
 }
 .divider .sub-title-divider h5:before{
@@ -880,26 +898,29 @@ p{
 .services-details__sidebar {
   position: relative;
   display: block;
-  /*margin-right: -35px;*/
 }
 .services-details__sidebar-services {
   position: relative;
   display: block;
   background: #f4f4f4;
   border: 1px solid #bfbfbf;
-  padding: 30px;
+  padding: 20px;
   border-radius: 5px;
+  /*overflow-y: scroll;*/
+  /*overflow-x: hidden;*/
+  /*width: 100%;*/
+  /*height: 460px;*/
 }
 .services-details__sidebar-services .title-box {
   position: relative;
   display: block;
-  padding-bottom: 16px;
+  padding-bottom: 5px;
 }
 .services-details__sidebar-services .title-box::before {
   position: absolute;
-  left:-30px;
+  left:-20px;
   bottom: 0;
-  right: -30px;
+  right: -20px;
   background: #bfbfbf;
   height: 1px;
   /*width: 100%;*/
@@ -923,7 +944,7 @@ p{
 .services-details__sidebar-services-list {
   position: relative;
   display: block;
-  margin-top: 30px;
+  margin-top: 20px;
   padding-left: 0 !important;
 }
 .services-details__sidebar-services-list li {
@@ -948,7 +969,7 @@ p{
   line-height: 25px;
   font-weight: 600;
   text-transform: capitalize;
-  padding: 18px 25px;
+  padding: 10px 15px;
   transition: all 200ms
   linear;
   transition-delay: 0.1s;
@@ -1065,3 +1086,167 @@ p{
   color: #ffff;
 }
 /*----Contact-Us-End----*/
+/*----Banner-Area-Start----*/
+.banner-area{
+  position: relative;
+  padding: 100px 0px;
+}
+.banner-area:after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  background:#000;
+  opacity: 0.5;
+}
+.banner-area .content-text{
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+.banner-area .content-text h1{
+  font-size: 42px;
+  font-weight: 600;
+  color: var(--optional);
+}
+.banner-area .content-text p{
+  color: #ffff;
+}
+/*----Banner-Area-End----*/
+/*----About-Page-Start----*/
+.company-history{
+  padding: 70px 0px;
+  background: #F3F5F5;
+}
+.company-history .company-history-left img{
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+.company-history .company-history-list > ul{
+  margin-bottom: 0 !important;
+  padding-left:0 !important;
+}
+.company-history .company-history-list > ul > li{
+  display: flex;
+  list-style: none;
+}
+.company-history .company-history-list > ul > li .icon > img{
+  background: var(--optional);
+  width: 60px;
+  /*height: 70px;*/
+  height: auto;
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+.company-history .company-history-list > ul > li > div >  h3{
+  font-size: 24px;
+  font-weight: 600;
+}
+/*----Experience-Start----*/
+.experience{
+  padding: 70px 0px;
+}
+.experience-left .years-project{
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+.experience-left .years-project .item {
+  display: flex;
+  align-items: center;
+}
+.experience-left .years-project .item > div > img{
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+  padding: 10px;
+  background: #e5fff2;
+  border-radius: 5px;
+}
+.experience-left .years-project .item > div > h3{
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 20px;
+}
+.experience-left .years-project .item > div > p{
+  margin-bottom: 0 !important;
+}
+/*----Experience-End----*/
+/*----About-Page-End----*/
+
+/*----Partnership-Start----*/
+.meet-brandon{
+  padding: 70px 0px;
+  background: #F3F5F5;
+}
+.meet-brandon .title > h2{
+  font-size: 36px;
+  font-weight: 600;
+}
+.meet-brandon .title > h2 > span{
+  color: var(--optional);
+}
+.meet-brandon .card-body > .image-card > img{
+  width:220px;
+  height: 220px;
+  border-radius: 50%;
+  /*object-fit: cover;*/
+}
+.meet-brandon .right-side .item-content > h3 {
+  font-weight: 600;
+}
+.meet-brandon .right-side .item-content > p{
+  position: relative;
+  padding-left: 10px;
+}
+.meet-brandon .right-side .item-content > p:before{
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  left: 0;
+  right: 0;
+  background: var(--optional);
+}
+.meet-brandon .right-side .item-content h5{
+  font-weight: 600;
+}
+.meet-brandon .right-side .item-content ul{
+  padding-left:0 !important;
+  margin-bottom: 0 !important;
+}
+.meet-brandon .right-side .item-content ul > li{
+  display: flex;
+  list-style: none;
+}
+.meet-brandon .right-side .item-content ul > li > span > svg{
+  color: var(--optional);
+  font-size: 20px;
+  margin-right: 10px;
+}
+.meet-brandon .right-side .item-content ul > li > p{
+  margin-bottom: 10px;
+}
+/*----Partnership-End----*/
+/*----Privacy-Start----*/
+.privacy{
+  padding: 70px 0px;
+}
+/*----Privacy-End----*/
+/*----Privacy-Start----*/
+.terms{
+  padding: 70px 0px;
+}
+/*----Privacy-End----*/
+.hero{
+  background:linear-gradient(135deg, #0d6efd 0%, #2b88f7 100%);
+  color:white;
+  padding:5rem 0;
+}
+.hero h1{font-weight:700;font-size:2.8rem;}
+.hero p{opacity:.92;font-size:1.1rem;}

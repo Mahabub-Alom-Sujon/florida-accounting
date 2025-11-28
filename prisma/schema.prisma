@@ -191,6 +191,23 @@ model teams {
 
 model about {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+}
+
+model privacy {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  long_des  String?
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+}
+
+model terms {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  long_des  String?
+  isActive  Boolean  @default(true)
   createdAt DateTime @default(now())
   updatedAt DateTime @default(now()) @updatedAt
 }

@@ -105,12 +105,31 @@
     .services-details__content{
         margin-top: 30px;
     }
+    .experience .experience-right{
+        margin-top: 40px;
+    }
+    .company-history .col-xl-6:nth-child(1){
+        order: 2;
+    }
+    .company-history .col-xl-6:nth-child(2){
+        order: 1;
+    }
+    .company-history .company-history-left{
+        margin-top: 20px;
+    }
+    .meet-brandon .right-side{
+        margin-top: 30px;
+    }
 }
 @media only screen and (max-width: 768px){
     .AppNavBar:before {
         -webkit-clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0 100%);
         clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0 100%);
         width: 35%;
+    }
+    .meet-brandon .card-body > .image-card > img {
+        width: 200px;
+        height: 200px;
     }
 }
 
@@ -124,6 +143,9 @@
     }
     .contact-us .contact-us-right {
         margin-top: 25px;
+    }
+    .company-history .company-history-left > img{
+        height: 450px;
     }
 }
 @media only screen and (max-width: 480px){
@@ -171,5 +193,30 @@
     }
     .blog-section {
         padding: 60px 0;
+    }
+    .experience {
+        padding: 60px 0px;
+    }
+    .experience-left .years-project {
+        grid-template-columns: 1fr;
+    }
+    .company-history {
+        padding: 60px 0px;
+    }
+    .company-history .company-history-left > img {
+        height: 400px;
+    }
+    .meet-brandon {
+        padding: 60px 0px;
+    }
+    .meet-brandon .card > .card-body{
+        padding: 2rem !important;
+    }
+    .meet-brandon .card-body > .image-card{
+        text-align: center;
+    }
+    .meet-brandon .card-body > .image-card > img {
+        width: 180px;
+        height: 180px;
     }
 }
